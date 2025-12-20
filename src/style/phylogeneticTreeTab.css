@@ -1,0 +1,150 @@
+/* Page container */
+.phylo-tab {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+/* Title */
+.phylo-tab h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+/* Radio buttons */
+.data-type-selection {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  margin-bottom: 30px;
+}
+
+.data-type-selection label {
+  font-size: 16px;
+  cursor: pointer;
+}
+
+/* ===== Upload card (outer) ===== */
+.drop-zone {
+  background-color: #ffffff;
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: 0 20px 45px rgba(120, 100, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: block;
+}
+
+/* ===== Dashed inner area ===== */
+.drop-zone p {
+  border: 2px dashed #d5d2ff;
+  border-radius: 18px;
+  padding: 45px 25px;
+  margin: 0;
+  text-align: center;
+  font-size: 17px;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+/* Highlighted text */
+.drop-zone strong {
+  color: #7b6cff;
+  font-weight: 600;
+}
+
+.browse-files {
+  color: #7b6cff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+/* Drag active state */
+.drop-zone.active p {
+  background-color: #f4f3ff;
+  border-color: #7b6cff;
+}
+
+/* Selected file text */
+.phylo-tab p:not(.drop-zone p) {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #444;
+}
+
+/* Generate Tree button */
+.phylo-tab button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 34px;
+  background-color: #7b6cff;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.phylo-tab button:hover:not(:disabled) {
+  background-color: #6658e6;
+  transform: translateY(-1px);
+}
+
+.phylo-tab button:disabled {
+  background-color: #bdb8ff;
+  cursor: not-allowed;
+}
+
+/* Container for the download button */
+.newick-download {
+  display: flex;
+  justify-content: center;
+  margin-top: 25px;
+}
+
+/* Styling the <a> tag to look like a pill button */
+.download-button {
+  display: inline-block;
+  padding: 12px 34px;
+  background-color: #7b6cff; /* Hollow style */
+  color: #ffffff;
+  border: 2px solid #7b6cff; /* Purple border */
+  border-radius: 999px; /* Matches your Generate button */
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none; /* Removes the underline */
+  transition: all 0.2s ease;
+  text-align: center;
+}
+
+.download-button:hover {
+  background-color: #5348b6;
+  color: #ffffff;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 20px rgba(123, 108, 255, 0.2);
+}
+
+.download-button:active {
+  transform: translateY(0);
+}
+
+/* Optional: styling the image result container to match your card style */
+.tree-result {
+  margin-top: 40px;
+  padding: 20px;
+  background: #ffffff;
+  border-radius: 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.05);
+  text-align: center;
+}
+
+.tree-result img {
+  max-width: 100%;
+  border-radius: 12px;
+  margin-top: 15px;
+}

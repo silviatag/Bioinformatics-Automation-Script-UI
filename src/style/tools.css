@@ -1,0 +1,59 @@
+/* Update the main container */
+.tools-page {
+  padding: 2rem;
+  font-family: Arial, sans-serif;
+  
+  /* NEW: Lock height to the screen */
+  height: 100vh; 
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box; /* Ensures padding doesn't add to height */
+  overflow: hidden; /* Prevents the whole page from scrolling */
+}
+
+/* Keep tabs section as is, but ensure it doesn't shrink */
+.tabs {
+  display: flex;
+  gap: 1rem;
+  margin-bottom: 2rem;
+  flex-shrink: 0; /* Prevents tabs from getting squashed */
+}
+
+/* Update the content area */
+.tab-content {
+  padding: 2rem; /* Reduced from 7rem to be more practical */
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+
+  /* NEW: Scroll logic */
+  flex-grow: 1;      /* Takes up all remaining space */
+  overflow-y: auto;  /* Only shows scrollbar when content is too long */
+  min-height: 0;     /* Required for flex children to scroll properly */
+}
+
+.tab-button {
+  padding: 0.5rem 1rem;
+  border: none;
+  background: #eee;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.tab-button:hover {
+  background: #ddd;
+}
+
+.tab-button.active {
+  background: #6c63ff;
+  color: white;
+}
+
+/* .tab-content {
+  padding: 7rem;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  background: #f9f9f9;
+
+} */
