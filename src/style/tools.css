@@ -16,7 +16,17 @@
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
-  /* flex-shrink: 0;  */
+
+  overflow-x: auto;               /* allow horizontal scroll */
+  -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+
+  /* Hide scrollbar but keep scrollable */
+  scrollbar-width: none;          /* Firefox */
+}
+
+.tabs::-webkit-scrollbar {
+  width: 0px;                     /* Chrome, Safari, Edge */
+  background: transparent;        /* optional */
 }
 
 /* Update the content area */
@@ -32,6 +42,7 @@
   min-height: 0;     /* Required for flex children to scroll properly */
 }
 
+
 .tab-button {
   padding: 0.5rem 1rem;
   border: none;
@@ -39,6 +50,7 @@
   cursor: pointer;
   border-radius: 5px;
   transition: background 0.3s;
+  flex-shrink: 0;
 }
 
 .tab-button:hover {
