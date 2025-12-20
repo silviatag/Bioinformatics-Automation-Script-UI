@@ -8,6 +8,8 @@ const PhylogeneticTreeTab = () => {
   const [treeImage, setTreeImage] = useState(null);
   const [newickFile, setNewickFile] = useState(null);
   const [loading, setLoading] = useState(false);
+  const RAILWAY_URL = process.env.REACT_APP_BACKEND_URL;
+
 
   const handleDataTypeChange = (e) => setDataType(e.target.value);
 
@@ -31,8 +33,7 @@ const PhylogeneticTreeTab = () => {
       const formData = new FormData();
       formData.append('msa', file);
       formData.append('type', dataType);
-      // const API_URL = process.env.REACT_APP_LOCAL_API_URL || '';
-      const response = await fetch('http://localhost:3000/api/phylogeneticTree', {
+      const response = await fetch(`${RAILWAY_URL}/api/phylogeneticTree`, {
         method: 'POST',
         body: formData,
       });
