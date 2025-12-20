@@ -16,7 +16,7 @@
   display: flex;
   gap: 1rem;
   margin-bottom: 2rem;
-  flex-shrink: 0; /* Prevents tabs from getting squashed */
+  /* flex-shrink: 0;  */
 }
 
 /* Update the content area */
