@@ -66,6 +66,28 @@ const PhylogeneticTreeTab = () => {
     }
   };
 
+  const handleDownloadNewick = async () => {
+    if (!newickFile) return;
+
+    try {
+      const response = await fetch(newickFile);
+      if (!response.ok) throw new Error('Failed to fetch Newick file');
+
+      const blob = await response.blob();
+      const url = window.URL.createObjectURL(blob);
+      const a = document.createElement('a');
+      a.href = url;
+      a.download = 'tree.newick';
+      document.body.appendChild(a);
+      a.click();
+      a.remove();
+      window.URL.revokeObjectURL(url);
+    } catch (err) {
+      console.error(err);
+      alert('Failed to download Newick file.');
+    }
+  };
+
   const handleDragOver = (e) => {
     e.preventDefault();
     setDragActive(true);
@@ -148,9 +170,9 @@ const PhylogeneticTreeTab = () => {
       {/* Download Newick file */}
       {newickFile && (
         <div className="newick-download">
-          <a href={newickFile} download="tree.newick" className="download-button">
+          <button onClick={handleDownloadNewick} className="download-button">
             Download Newick File
-          </a>
+          </button>
         </div>
       )}
     </div>
