@@ -148,8 +148,9 @@ const PhylogeneticTreeTab = () => {
       {/* Download Newick file */}
       {newickFile && (
         <div className="newick-download">
-          <a href={newickFile} download className="download-button">
-            <button>Download Newick File</button>
+          
+          <a href={newickFile} download="tree.newick" className="download-button">
+            Download Newick File
           </a>
         </div>
       )}
