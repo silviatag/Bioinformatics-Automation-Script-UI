@@ -148,9 +148,19 @@ const PhylogeneticTreeTab = () => {
       {/* Download Newick file */}
       {newickFile && (
         <div className="newick-download">
-          <a href={newickFile} download="tree.newick" className="download-button">
+          <button
+            className="download-button"
+            onClick={() => {
+              const link = document.createElement("a");
+              link.href = newickFile;
+              link.download = "tree.newick"; // suggested filename
+              document.body.appendChild(link);
+              link.click();
+              document.body.removeChild(link);
+            }}
+          >
             Download Newick File
-          </a>
+          </button>
         </div>
       )}
     </div>
