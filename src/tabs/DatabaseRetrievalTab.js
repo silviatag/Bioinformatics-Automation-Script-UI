@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import '../style/databaseRetrievalTab.css';
 
 const DatabaseRetrievalTab = () => {
-  const [source, setSource] = useState('NCBI gene');
+  const [source, setSource] = useState('1'); // default NCBI Gene
   const [keyword, setKeyword] = useState('');
   const [fastaText, setFastaText] = useState('');
   const [loading, setLoading] = useState(false);
@@ -12,7 +12,6 @@ const DatabaseRetrievalTab = () => {
   const handleKeywordChange = (e) => setKeyword(e.target.value);
 
   const handleRetrieve = async () => {
-    // Check required fields
     if (!source || !keyword) {
       alert('Please fill out both Source and Keyword fields.');
       return;
@@ -22,6 +21,7 @@ const DatabaseRetrievalTab = () => {
     setFastaText('');
 
     try {
+      // Step 1: Request FASTA generation
       const response = await fetch(`${RAILWAY_URL}/api/dbRetrieval`, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
@@ -36,7 +36,17 @@ const DatabaseRetrievalTab = () => {
         return;
       }
 
-      setFastaText(`>FASTA retrieved successfully\nDownload URL: ${data.fasta}`);
+      // Step 2: Fetch the actual content of the FASTA file
+      const fastaResponse = await fetch(data.fasta);
+      if (!fastaResponse.ok) {
+        alert('Failed to fetch FASTA content.');
+        setLoading(false);
+        return;
+      }
+
+      const fastaContent = await fastaResponse.text();
+      setFastaText(fastaContent);
+
     } catch (err) {
       console.error(err);
       alert('An error occurred while contacting the server.');
@@ -84,7 +94,11 @@ const DatabaseRetrievalTab = () => {
           <h3>FASTA Output:</h3>
           <pre>{fastaText}</pre>
           <div className="download-container">
-            <a href={fastaText.split('Download URL: ')[1]} target="_blank" rel="noopener noreferrer">
+            <a
+              href={`${RAILWAY_URL}/outputs/${keyword}.fasta`}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               <button>Download</button>
             </a>
           </div>
