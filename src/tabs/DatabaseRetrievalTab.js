@@ -2,10 +2,11 @@ import React, { useState } from 'react';
 import '../style/databaseRetrievalTab.css';
 
 const DatabaseRetrievalTab = () => {
-  const [source, setSource] = useState('1'); // default NCBI Gene
-  const [keyword, setKeyword] = useState('');
+  const [source, setSource] = useState('3'); // default Uniprot Protein
+  const [keyword, setKeyword] = useState('Q8IUI8');
   const [fastaText, setFastaText] = useState('');
   const [loading, setLoading] = useState(false);
+  const [jobId, setJobId] = useState(null);
   const RAILWAY_URL = process.env.REACT_APP_BACKEND_URL;
 
   const handleSourceChange = (e) => setSource(e.target.value);
@@ -19,6 +20,7 @@ const DatabaseRetrievalTab = () => {
 
     setLoading(true);
     setFastaText('');
+    setJobId(null);
 
     try {
       // Step 1: Request FASTA generation
@@ -36,16 +38,9 @@ const DatabaseRetrievalTab = () => {
         return;
       }
 
-      // Step 2: Fetch the actual content of the FASTA file
-      const fastaResponse = await fetch(data.fasta);
-      if (!fastaResponse.ok) {
-        alert('Failed to fetch FASTA content.');
-        setLoading(false);
-        return;
-      }
-
-      const fastaContent = await fastaResponse.text();
-      setFastaText(fastaContent);
+      // Use rawOutput from backend as the FASTA content
+      setFastaText(data.rawOutput);
+      setJobId(data.jobId);
 
     } catch (err) {
       console.error(err);
@@ -93,15 +88,17 @@ const DatabaseRetrievalTab = () => {
         <div className="fasta-result">
           <h3>FASTA Output:</h3>
           <pre>{fastaText}</pre>
-          <div className="download-container">
-            <a
-              href={`${RAILWAY_URL}/outputs/${keyword}.fasta`}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
-              <button>Download</button>
-            </a>
-          </div>
+          {jobId && (
+            <div className="download-container">
+              <a
+                href={`${RAILWAY_URL}/outputs/${jobId}/${keyword}.fasta`}
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button>Download</button>
+              </a>
+            </div>
+          )}
         </div>
       )}
     </div>
