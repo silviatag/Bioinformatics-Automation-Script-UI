@@ -22,6 +22,8 @@
 
   /* Hide scrollbar but keep scrollable */
   scrollbar-width: none;          /* Firefox */
+    flex-shrink: 0;  /* Prevent vertical compression */
+  
 }
 
 .tabs::-webkit-scrollbar {
