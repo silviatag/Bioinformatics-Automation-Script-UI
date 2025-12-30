@@ -1,11 +1,12 @@
 import React from 'react'
 import { Link } from 'react-router-dom';
 import '../style/home.css';
-const home = () => {
+
+const Home = () => {
   return (
       <div className='home'>
           <section className="hero">
-        <h1>Welcome to BioPipeline!</h1>
+        <h1>Welcome to SeqFlow!</h1>
         <p>
           Streamline your bioinformatics workflow: retrieve databases, align sequences, 
           perform multiple sequence alignments, and generate phylogenetic trees — all in one place.
@@ -27,4 +28,4 @@ const home = () => {
   )
 }
 
-export default home
+export default Home
