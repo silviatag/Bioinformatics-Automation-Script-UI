@@ -31,7 +31,7 @@ const MultipleSequenceAlignmentTab = () => {
         body: JSON.stringify({
           dbType: sequenceType,
           tool,
-          accessions: accessions.trim().split(/\s+/)
+          accessions: accessions
         })
       });
 
