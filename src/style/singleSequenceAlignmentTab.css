@@ -114,3 +114,17 @@
   border-color: #7b6cff;
   box-shadow: 0 0 0 3px rgba(123, 108, 255, 0.2);
 }
+.alignment-result {
+  width: 100%;
+  max-width: 500px;
+  margin-top: 1.5rem;
+}
+
+.alignment-result pre {
+  background: #f4f4f4;
+  padding: 1rem;
+  border-radius: 4px;
+  max-height: 300px;
+  overflow-y: auto;
+  white-space: pre-wrap; /* ensures long lines wrap */
+}

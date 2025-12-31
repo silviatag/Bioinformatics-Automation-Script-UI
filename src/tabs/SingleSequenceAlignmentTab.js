@@ -123,7 +123,7 @@ const SingleSequenceAlignmentTab = () => {
 
       {/* Alignment Output */}
       {alignmentOutput && (
-        <div className="alignment-output">
+        <div className="alignment-result">
           <h3>Alignment Result</h3>
           <pre>{alignmentOutput}</pre>
         </div>
