@@ -1,0 +1,116 @@
+.single-align-tab {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 30px 20px;
+}
+
+.single-align-tab h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.drop-zone {
+  background-color: #ffffff;
+  border-radius: 22px;
+  padding: 26px;
+  box-shadow: 0 20px 45px rgba(120, 100, 255, 0.2);
+  cursor: pointer;
+  transition: all 0.25s ease;
+  display: block;
+  text-align: center;
+}
+
+.drop-zone p {
+  border: 2px dashed #d5d2ff;
+  border-radius: 18px;
+  padding: 45px 25px;
+  margin: 0;
+  font-size: 17px;
+  color: #2e2e2e;
+  line-height: 1.6;
+}
+
+
+.drop-zone strong {
+  color: #7b6cff;
+  font-weight: 600;
+}
+
+.browse-files {
+  color: #7b6cff;
+  text-decoration: underline;
+  font-weight: 500;
+}
+
+.drop-zone.active p {
+  background-color: #f4f3ff;
+  border-color: #7b6cff;
+}
+
+/* Generate Tree button */
+.single-align-tab button {
+  display: block;
+  margin: 30px auto 0;
+  padding: 12px 34px;
+  background-color: #7b6cff;
+  color: #ffffff;
+  border: none;
+  border-radius: 999px;
+  font-size: 16px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.single-align-tab button:hover:not(:disabled) {
+  background-color: #6658e6;
+  transform: translateY(-1px);
+}
+
+.single-align-tab button:disabled {
+  background-color: #bdb8ff;
+  cursor: not-allowed;
+}
+
+/* Tool selection */
+.tool-selection {
+  margin-bottom: 20px;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #2e2e2e;
+}
+
+.tool-selection label {
+  margin-right: 8px;
+}
+
+.tool-selection select {
+  padding: 8px 14px;
+  border-radius: 22px;
+  border: 2px solid #d5d2ff;
+  background-color: #ffffff;
+  box-shadow: 0 10px 25px rgba(120, 100, 255, 0.1);
+  font-size: 15px;
+  font-weight: 500;
+  color: #2e2e2e;
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+
+.tool-selection select:hover {
+  border-color: #7b6cff;
+  box-shadow: 0 10px 25px rgba(123, 108, 255, 0.2);
+}
+
+.tool-selection select:focus {
+  outline: none;
+  border-color: #7b6cff;
+  box-shadow: 0 0 0 3px rgba(123, 108, 255, 0.2);
+}
