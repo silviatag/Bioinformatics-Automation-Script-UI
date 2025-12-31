@@ -114,10 +114,14 @@
   border-color: #7b6cff;
   box-shadow: 0 0 0 3px rgba(123, 108, 255, 0.2);
 }
+
+
+/* Center alignment output and buttons */
 .alignment-result {
   width: 100%;
   max-width: 500px;
-  margin-top: 1.5rem;
+  margin: 1.5rem auto; /* auto left/right to center */
+  text-align: left; /* keeps text aligned inside pre */
 }
 
 .alignment-result pre {
@@ -126,5 +130,13 @@
   border-radius: 4px;
   max-height: 300px;
   overflow-y: auto;
-  white-space: pre-wrap; /* ensures long lines wrap */
+  white-space: pre-wrap;
+}
+
+/* Center the download buttons */
+.download-buttons {
+  display: flex;
+  justify-content: center; /* center horizontally */
+  gap: 10px; /* spacing between buttons */
+  margin-top: 1rem;
 }
