@@ -119,7 +119,7 @@
 /* Center alignment output and buttons */
 .alignment-result {
   width: 100%;
-  max-width: 500px;
+  max-width: 750px;
   margin: 1.5rem auto; /* auto left/right to center */
   text-align: left; /* keeps text aligned inside pre */
 }
