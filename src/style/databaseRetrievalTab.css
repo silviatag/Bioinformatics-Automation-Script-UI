@@ -85,9 +85,12 @@
   border-radius: 4px;
   max-height: 300px;
   overflow-y: auto;
-  border: #1A2238 2px solid;
+  border: #007c91 2px solid;
+  color: #1A2238;
 }
-
+.fasta-result h3{
+  color:#1A2238;
+}
 .download-container {
   display: flex;
   justify-content: center;
