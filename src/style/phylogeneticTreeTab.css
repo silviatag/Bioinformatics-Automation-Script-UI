@@ -11,6 +11,7 @@
   margin-bottom: 25px;
   font-size: 24px;
   font-weight: 600;
+  color: #1A2238;
 }
 
 /* Radio buttons */
@@ -22,6 +23,7 @@
 }
 
 .data-type-selection label {
+  color: #1A2238;
   font-size: 16px;
   cursor: pointer;
 }
@@ -39,7 +41,7 @@
 
 /* ===== Dashed inner area ===== */
 .drop-zone p {
-  border: 2px dashed #d5d2ff;
+  border: 2px dashed #007C91;
   border-radius: 18px;
   padding: 45px 25px;
   margin: 0;
@@ -51,12 +53,12 @@
 
 /* Highlighted text */
 .drop-zone strong {
-  color: #7b6cff;
+  color: #007C91;
   font-weight: 600;
 }
 
 .browse-files {
-  color: #7b6cff;
+  color: #007C91;
   text-decoration: underline;
   font-weight: 500;
 }
@@ -64,7 +66,7 @@
 /* Drag active state */
 .drop-zone.active p {
   background-color: #f4f3ff;
-  border-color: #7b6cff;
+  border-color: #007C91;
 }
 
 /* Selected file text */
@@ -80,7 +82,7 @@
   display: block;
   margin: 30px auto 0;
   padding: 12px 34px;
-  background-color: #7b6cff;
+  background-color: #007C91 !important;
   color: #ffffff;
   border: none;
   border-radius: 999px;
@@ -91,12 +93,12 @@
 }
 
 .phylo-tab button:hover:not(:disabled) {
-  background-color: #6658e6;
+  background-color: #00798f73;
   transform: translateY(-1px);
 }
 
 .phylo-tab button:disabled {
-  background-color: #bdb8ff;
+  background-color: #007C9150 !important;
   cursor: not-allowed;
 }
 
@@ -111,9 +113,9 @@
 .download-button {
   display: inline-block;
   padding: 12px 34px;
-  background-color: #7b6cff; /* Hollow style */
+  background-color: #007C91; /* Hollow style */
   color: #ffffff;
-  border: 2px solid #7b6cff; /* Purple border */
+  border: 2px solid #007C91; /* Purple border */
   border-radius: 999px; /* Matches your Generate button */
   font-size: 16px;
   font-weight: 500;
@@ -123,7 +125,7 @@
 }
 
 .download-button:hover {
-  background-color: #5348b6;
+  background-color: #007C91;
   color: #ffffff;
   transform: translateY(-1px);
   box-shadow: 0 10px 20px rgba(123, 108, 255, 0.2);

@@ -5,6 +5,10 @@
   align-items: center; /* centers everything horizontally */
 }
 
+.db-tab h2 {
+  color: #1A2238;
+}
+
 .input-container {
   width: 100%;
   max-width: 500px; /* keeps things from stretching too much */
@@ -38,24 +42,35 @@
   width: 100%;
 }
 
-.button-row {
-  display: flex;
-  justify-content: center;
-  margin-bottom: 1.5rem;
-}
-
-.button-row button {
+/* Buttons (Retrieve + Download) */
+.db-tab .button-row button,
+.db-tab .download-container button {
   padding: 0.6rem 1.2rem;
   font-size: 1rem;
   border-radius: 5px;
   border: none;
-  background-color: #6c63ff;
+  background-color: #007C91; /* unified color */
   color: white;
   cursor: pointer;
+  transition: background-color 0.2s ease;
 }
 
-.button-row button:hover {
-  background-color: #5751d9;
+.db-tab .button-row button:hover,
+.db-tab .download-container button:hover {
+  background-color: #0a3b4b; /* slightly darker for hover */
+}
+
+/* Disabled button style */
+.button-row button:disabled,
+.download-container button:disabled {
+  background-color: #7a9aa3;
+  cursor: not-allowed;
+}
+
+.button-row {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1.5rem;
 }
 
 .fasta-result {
@@ -70,6 +85,7 @@
   border-radius: 4px;
   max-height: 300px;
   overflow-y: auto;
+  border: #1A2238 2px solid;
 }
 
 .download-container {
@@ -78,15 +94,6 @@
   margin-top: 0.5rem;
 }
 
-.download-container button {
-  padding: 0.6rem 1.2rem;
-  border-radius: 5px;
-  border: none;
-  background-color: #6c63ff;
-  color: white;
-  cursor: pointer;
-}
-
-.download-container button:hover {
-  background-color: #5751d9;
+.input-group label{
+  color: #1A2238;
 }

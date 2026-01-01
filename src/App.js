@@ -1,4 +1,3 @@
-import logo from './logo.svg';
 import './App.css';
 import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
 import Home from './Pages/Home';
@@ -13,7 +12,7 @@ function App() {
         {/* Navigation Bar */}
         <nav className="navbar">
           <div className="navbar-left">
-            {/* <img src={logo} className="lظogo" alt="logo" /> */}
+            <img src="/SeqFlow-logo.png" className="logo" alt="logo" />
           </div>
           <div className="navbar-right">
             <Link to="/Home">Home</Link>

@@ -1,23 +1,30 @@
 .home {
   text-align: center;
   padding: 50px 20px;
+  /* Diagonal gradient background */
+  background: linear-gradient(135deg, #1A2238, #00BCD4);
+  min-height: 100vh; /* ensures it covers full screen */
+  color: white; /* optional: makes text readable on dark gradient */
 }
 
 .hero h1 {
   font-size: 2.5em;
   margin-bottom: 20px;
+  color: #FFFFFF;
 }
 
 .hero p {
   font-size: 1.2em;
   margin-bottom: 30px;
+  color: #F5F5F5;
 }
 
 .cta-button {
-  background-color: darkgray;
+  background-color: #9EEAF9;
   border: none;
-  color: #000;
+  color: #0D4F65;
   font-size: 18px;
+  font-weight: bold;
   padding: 12px 30px;
   cursor: pointer;
   border-radius: 5px;
@@ -25,7 +32,7 @@
 }
 
 .cta-button:hover {
-  background-color: gray;
+  background-color: #00BCD4;
 }
 
 .features {

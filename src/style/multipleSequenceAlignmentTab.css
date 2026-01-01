@@ -4,7 +4,9 @@
   flex-direction: column;
   align-items: center; /* centers everything horizontally */
 }
-
+.msa-tab h2 {
+  color: #1A2238;
+}
 .input-container {
   width: 100%;
   max-width: 500px; /* keeps things from stretching too much */
@@ -23,7 +25,9 @@
   align-items: center;
   gap: 0.3rem;
   cursor: pointer;
+  color: #1A2238;
 }
+
 
 .input-row {
   display: flex;
@@ -64,13 +68,13 @@
   font-size: 1rem;
   border-radius: 5px;
   border: none;
-  background-color: #6c63ff;
+  background-color: #0D4F65;
   color: white;
   cursor: pointer;
 }
 
 .button-row button:hover {
-  background-color: #5751d9;
+  background-color: #116f8f;
 }
 
 /* Optional: for displaying MSA results later */
@@ -84,6 +88,7 @@
   background: #f4f4f4;
   padding: 1rem;
   border-radius: 4px;
+  border-color: #0D4F65;
   max-height: 300px;
   overflow-y: auto;
 }
@@ -98,11 +103,11 @@
   padding: 0.6rem 1.2rem;
   border-radius: 5px;
   border: none;
-  background-color: #6c63ff;
+  background-color: #0D4F65;
   color: white;
   cursor: pointer;
 }
 
 .download-container button:hover {
-  background-color: #5751d9;
+  background-color: #116f8f;
 }

@@ -2,19 +2,21 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 35px 20px;
-  background-color: #282c34;
+  padding: 30px 20px;
+  background-color: #9EEAF9;
    position: sticky;
   top: 0;
   z-index: 1000;
 }
 
 .navbar-left img.logo {
-  height: 35px;
+  height: 35px; /* keep original height */
+  transform: scale(3.5); /* makes it visually bigger */
+  transform-origin: left center; /* optional: anchor from left */
 }
 
 .navbar-right a {
-  color: white;
+  color: #1A2238;
   margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
