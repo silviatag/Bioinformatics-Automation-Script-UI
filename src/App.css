@@ -3,7 +3,7 @@
   justify-content: space-between;
   align-items: center;
   padding: 30px 20px;
-  background-color: #9EEAF9;
+  background-color: #f0f9ff;
    position: sticky;
   top: 0;
   z-index: 1000;
@@ -20,6 +20,7 @@
   margin-left: 20px;
   text-decoration: none;
   font-weight: bold;
+  font-size: large;
 }
 
 .navbar-right a:hover {
