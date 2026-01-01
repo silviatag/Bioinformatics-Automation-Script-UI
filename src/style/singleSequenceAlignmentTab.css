@@ -132,12 +132,16 @@
   background: #f4f4f4;
   padding: 1rem;
   border-radius: 4px;
-  border-color: #2e2e2e;
+  border-color: #007c91;
+  color: black;
   max-height: 300px;
   overflow-y: auto;
   white-space: pre-wrap;
 }
 
+.alignment-result h3{
+  color: #1A2238;
+}
 /* Center the download buttons */
 .download-buttons {
   display: flex;
